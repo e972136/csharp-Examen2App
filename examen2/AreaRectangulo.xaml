@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen2.AreaRectangulo"
+             xmlns:viewmodel="clr-namespace:examen2.ViewModels"
+             Title="AreaRectangulo">
+
+    <ContentPage.BindingContext>
+        <viewmodel:AreaRectanguloView/>
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout>
+
+        <Entry x:Name="BaseRectangulo"
+ Placeholder="Ingresar Base"
+            Text="{Binding BaseRectangulo}"
+         Keyboard="Numeric"
+  />
+
+        <Entry x:Name="AlturaRectangulo"
+ Placeholder="Ingresar Base"
+            Text="{Binding AlturaRectangulo}"
+         Keyboard="Numeric"
+  />
+
+        <Entry x:Name="Respuesta"
+    Placeholder="Respuesta"
+               Text="{Binding Respuesta}"
+            IsReadOnly="True"
+            
+     />
+
+        <Button Text="CALCULAR"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+                Command="{Binding CalcularCommand}"
+             />
+
+        <Button Text="LIMPIAR"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+                Command="{Binding LimpiarCommand}"
+             />
+
+    </VerticalStackLayout>
+</ContentPage>
